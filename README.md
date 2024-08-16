@@ -6,3 +6,19 @@ A simple and fancy clock application built in Pygame. This project showcases the
 
 
 ![pygame-clock](sample.gif)
+
+
+## Setup
+
+create a python virtual environment and source it
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+install pygame-ce
+```bash
+pip install pygame-ce
+```
+
+
