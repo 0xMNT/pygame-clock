@@ -21,4 +21,7 @@ install pygame-ce
 pip install pygame-ce
 ```
 
-
+run
+```bash
+python app.py
+```
