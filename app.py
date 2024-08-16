@@ -5,14 +5,16 @@ import pygame
 
 pygame.init()
 
+# constants
+WIDTH, HEIGHT = 1280, 720
 
 # font and size
 font_path = "JetBrainsMonoNLNerdFontMono-Regular.ttf"
-font = pygame.font.Font(font_path, 30)  # None means default font, 74 is the font size
+font = pygame.font.Font(font_path, 30)
 
 
 # pygame setup
-screen = pygame.display.set_mode((1280, 720))
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 running = True
 
@@ -27,12 +29,10 @@ h_color = "#e0e1dd"
 
 # Parameters
 circle_radius = 30  # Radius of the antialiased circle
-rotation_radius = 200  # Distance from the center to the circle's path
-angle_speed = 1
 center = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 
 
-# Helper Functions
+# helper functions
 def GetTime():
     now = datetime.now()
     hours = int(now.strftime("%I"))  # Hours (12-hour clock) without leading zero
@@ -82,11 +82,11 @@ while running:
 
     # draw circle from 0 to the current time in hours, minuts or seconds
     for i in seconds_coordinates[: s * 6]:
-        pygame.draw.aacircle(screen, s_color, (i[0], i[1]), 30)
+        pygame.draw.aacircle(screen, s_color, (i[0], i[1]), circle_radius)
     for i in minutes_coordinates[: m * 6]:
-        pygame.draw.aacircle(screen, m_color, (i[0], i[1]), 30)
+        pygame.draw.aacircle(screen, m_color, (i[0], i[1]), circle_radius)
     for i in hours_coordinates[: h * 30]:
-        pygame.draw.aacircle(screen, h_color, (i[0], i[1]), 30)
+        pygame.draw.aacircle(screen, h_color, (i[0], i[1]), circle_radius)
 
     # Get the current time
     current_time = datetime.now()
