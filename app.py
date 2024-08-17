@@ -38,7 +38,7 @@ def get_time():
     hours = int(now.strftime("%I"))  # Hours (12-hour clock) without leading zero
     minutes = int(now.strftime("%M"))  # Minutes without leading zero
     seconds = int(now.strftime("%S"))  # Seconds without leading zero
-    return now, hours, minutes, seconds
+    return hours, minutes, seconds
 
 
 # save all x,y coordinates in a list for all points on a circle
@@ -75,7 +75,7 @@ while running:
                 running = False
 
     # set variables for time
-    now, h, m, s = get_time()
+    h, m, s = get_time()
 
     # fill screen with background color
     screen.fill(background)
