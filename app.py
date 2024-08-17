@@ -33,7 +33,7 @@ center = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 
 
 # helper functions
-def GetTime():
+def get_time():
     now = datetime.now()
     hours = int(now.strftime("%I"))  # Hours (12-hour clock) without leading zero
     minutes = int(now.strftime("%M"))  # Minutes without leading zero
@@ -75,7 +75,7 @@ while running:
                 running = False
 
     # set variables for time
-    now, h, m, s = GetTime()
+    now, h, m, s = get_time()
 
     # fill screen with background color
     screen.fill(background)
@@ -91,7 +91,7 @@ while running:
     # Get the current time
     current_time = datetime.now()
 
-    # Format seconds with leading zero for clock in the center of screen
+    # Format time with leading zero for clock in the center of screen
     hours = current_time.strftime("%H")
     minutes = current_time.strftime("%M")
     seconds = current_time.strftime("%S")
