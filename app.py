@@ -22,7 +22,7 @@ running = True
 # Colors
 background = "#101010"
 green = "#40916c"
-s_color = "#415a77"
+s_color = "#d3d0cb"
 m_color = "#778da9"
 h_color = "#e0e1dd"
 
